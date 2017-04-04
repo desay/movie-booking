@@ -16,8 +16,8 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
     List<Reservation> findByMovieIdOrderByStartDateAsc(@Param("movieId") Long movieId);
 
     List<Reservation> findByMovieIdAndStartDateBetween(@Param("movieId") Long movieId,
-                                                      @Param("startDate") LocalDateTime startDate,
-                                                      @Param("endDate") LocalDateTime endDate);
+                                                       @Param("startDate") LocalDateTime startDate,
+                                                       @Param("endDate") LocalDateTime endDate);
 
     List<Reservation> findOverlapped(@Param("movieId") Long movieId,
                                      @Param("startDate") LocalDateTime startDate,
